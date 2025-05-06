@@ -59,7 +59,6 @@ class ClientHandler extends Thread {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
             out = new PrintWriter(socket.getOutputStream(), true);
             username = in.readLine();
-            broadcastSystemMessage("🌟 " + username + " se ha conectado");
 
             String message;
             while ((message = in.readLine()) != null) {
